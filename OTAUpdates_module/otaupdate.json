@@ -2,7 +2,7 @@
   "Configurations": [
     {
       "Version": "1.0.1",
-      "URL": "https://raw.githubusercontent.com/ramiss/FPV-Scanner/master/OTAUpdates_module/firmware.bin"
+      "URL": "http://raw.githubusercontent.com/ramiss/FPV-Scanner/master/OTAUpdates_module/firmware.bin"
     }
   ]
 }
