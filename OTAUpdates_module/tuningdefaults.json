@@ -1,7 +1,7 @@
 {
   "_comment": "The module will automatically update to these settings on first flash, or if the date increases thereafter",
-  "version": 20251211,
-  "TRIG_OFFSET": 15,
+  "version": 20251212,
+  "TRIG_OFFSET": 25,
   "TRIG_KSIGMA": 1.5,
   "TRIG_MIN_FRACTION": 0.35,
   "TRIG_MIN_RUN": 3,
