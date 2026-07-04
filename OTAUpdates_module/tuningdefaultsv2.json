@@ -1,10 +1,10 @@
 {
-  "_comment": "v2: for firmware with the two-path (broad/narrow) trigger rework. TRIG_MIN_AREA is now a density (sum(v-threshold)/nAvail MHz), not a raw sum, so it is NOT comparable to tuningdefaults.json's v1 scale — devices on older firmware must keep using tuningdefaults.json. The module will automatically update to these settings on first flash, or if the date increases thereafter.",
-  "version": 20260702,
-  "TRIG_OFFSET": 60,
+  "_comment": "v2: for firmware 1.1.0+ with the reworked trigger (two instant paths + leaky weak-signal integrator). Threshold = noise floor + TRIG_OFFSET (single margin; TRIG_KSIGMA is inactive/compat-only). TRIG_MIN_AREA is inactive/compat-only (covered by TRIG_MIN_FRACTION x TRIG_MIN_MEAN_EXCESS). TRIG_MIN_RUN is a FRACTION of the guarded band's available bins required as a contiguous run, NOT a raw bin count (reworked for scale-invariance across equipment with different channel bandwidths). TRIG_WEAK_CONFIRM is the integrator confirm level. These values are NOT comparable to tuningdefaults.json's v1 scale — devices on older firmware must keep using tuningdefaults.json. The module will automatically update to these settings on first flash, or if the version increases thereafter.",
+  "version": 20260704,
+  "TRIG_OFFSET": 80,
   "TRIG_KSIGMA": 2.0,
   "TRIG_MIN_FRACTION": 0.45,
-  "TRIG_MIN_RUN": 3,
+  "TRIG_MIN_RUN": 0.20,
   "TRIG_MIN_AREA": 15,
   "TRIG_EDGE_GUARD_BINS": 0,
   "USE_CENTER_WEIGHT": 0,
@@ -12,5 +12,6 @@
   "CENTER_MIN_HIT_FRAC": 0.20,
   "USE_PEAK_PROMINENCE": 1,
   "PEAK_PROMINENCE_MIN": 120,
-  "TRIG_MIN_MEAN_EXCESS": 30
+  "TRIG_MIN_MEAN_EXCESS": 30,
+  "TRIG_WEAK_CONFIRM": 1.5
 }

@@ -1,0 +1,9 @@
+{
+  "_comment": "Checked by app builds from the 1.1.0 trigger rework onward (see AppSettings.OTA_JSON_URL) — these apps know how to ask a connected module for its firmware version and pick the right tuningdefaults file (v1 vs v2) accordingly, so it's safe to advertise 1.1.0+ releases here. otaupdate.json (no 'v2') stays frozen at the last pre-rework version for older app builds that lack that awareness. Bump the Version/URL below once a compiled 1.1.0+ firmware.bin is actually published — until then this intentionally mirrors otaupdate.json so nothing advertises an artifact that doesn't exist yet.",
+  "Configurations": [
+    {
+      "Version": "1.1.0",
+      "URL": "https://raw.githubusercontent.com/ramiss/FPV-Scanner/master/OTAUpdates_module/firmware_1.1.0.bin"
+    }
+  ]
+}
