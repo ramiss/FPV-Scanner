@@ -1,9 +1,8 @@
 {
-  "_comment": "LEGACY/FROZEN — checked by app builds that predate the 1.1.0 trigger rework (raw-sum TRIG_MIN_AREA, raw-count TRIG_MIN_RUN, no per-module firmware-version awareness). Those apps blindly push tuningdefaults.json's OLD-scale values to whatever module they connect to, so they must never discover 1.1.0+ firmware here — TRIG_MIN_RUN in particular changed from a raw count to a fraction, and an old app sending e.g. 3 would be read as 300% on new firmware, clamping the broad-signal trigger path to effectively 'require the whole band.' Do not bump this file's Version past what those old apps can safely auto-apply tuning to. New app builds check otaupdatev2.json instead (see AppSettings.OTA_JSON_URL) — bump that one for 1.1.0+ releases.",
   "Configurations": [
     {
-      "Version": "1.0.1",
-      "URL": "https://raw.githubusercontent.com/ramiss/FPV-Scanner/master/OTAUpdates_module/firmware.bin"
+      "Version": "1.1.0",
+      "URL": "https://raw.githubusercontent.com/ramiss/FPV-Scanner/master/OTAUpdates_module/firmware_1_1_0.bin"
     }
   ]
 }
